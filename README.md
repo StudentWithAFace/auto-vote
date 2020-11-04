@@ -1,7 +1,7 @@
 # auto-vote
 ### How to install
 ```
-git clone 
+git clone https://github.com/StudentWithAFace/auto-vote.git
 ```
 
 
