@@ -1,0 +1,10 @@
+
+counter=1
+while [ $counter -le 3000 ]
+do
+pollmommy -u https://polldaddy.com/p/10640710 -i 10640710 -o 49273617
+echo $counter
+((counter++))
+done
+echo All done
+exit;

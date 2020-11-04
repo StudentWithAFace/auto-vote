@@ -1,0 +1,17 @@
+#!/bin/bash
+curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|.*>node-(.*)\.pkg</a>.*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
+sleep 5
+echo done 1/3
+sleep .5
+npm install pollmommy -g
+echo done 2/3
+sleep .5
+chmod +x ~/vote.txt
+echo done 3/3
+sleep .5
+echo Now starting the the program.
+sleep 2
+echo use the vote.txt file from now on!
+sleep 3
+~/vote.txt
+exit;
